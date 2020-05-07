@@ -18,6 +18,7 @@ def sms_reply():
     #check the message by parsing text
     resp = MessagingResponse()
     resp.message(weather.get_weather(msg))
+
     # Create reply
     return str(resp)
 
