@@ -1,8 +1,12 @@
 from flask import Flask, request
 from twilio.twiml.messaging_response import MessagingResponse
-import weather
+
+import reply
 
 app = Flask(__name__)
+
+
+
 
 @app.route("/")
 def hello():
@@ -13,12 +17,11 @@ def sms_reply():
 
     """Respond to incoming calls with a simple text message."""
     # Fetch the message
-
     msg = request.form.get('Body')
+
     #check the message by parsing text
     resp = MessagingResponse()
-    resp.message(weather.get_weather(msg))
-
+    resp.message(reply.reply_message(msg))
     # Create reply
     return str(resp)
 

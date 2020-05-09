@@ -12,7 +12,5 @@ def get_weather(city):
     if(cod=='404'):
         return "City not found"
     else:
-        return "Temperature:"+str(response.json()['list'][0]['main']['temp'])+"\nWeather:"+str(response.json()['list'][0]['weather'][0]['description'])+"\nHumidity"+str(response.json()['list'][0]['main']['humidity'])
-
-
+        return "Temperature:"+str(int(response.json()['list'][0]['main']['temp']-273))+"\nWeather:"+str(response.json()['list'][0]['weather'][0]['description'])+"\nHumidity"+str(response.json()['list'][0]['main']['humidity'])
 
