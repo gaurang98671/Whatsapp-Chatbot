@@ -12,3 +12,6 @@ def reply_message(msg):
         return  dictionary.get_defination(msg.split()[1])
     else:
         return "I dont understand"
+    
+    if(msg ='covid'):
+        return tracker.tracker()
