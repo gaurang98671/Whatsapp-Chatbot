@@ -9,33 +9,9 @@ app = Flask(__name__)
 @app.route("/")
 
 def hello():
-    return render_template('signup.html', title="SignUp")
+    return render_template("Hello world")
 
-@app.route('/signUp', methods=['POST'])
 
-def signUp():
-    username=str(request.form['user'])
-    print(username)
-    return redirect(url_for("login"))
-
-@app.route('/login', methods=['POST', 'GET'])
-
-def login():
-    return render_template('login.html', data='Login')
-
-@app.route('/login_user', methods=['POST'])
-def login_user():
-    userName=str(request.form['username'])
-    password=str(request.form['password'])
-
-    if(userName=="Gaurang" and password=="password"):
-        return redirect(url_for('home'))
-    else:
-        return "Login failed"
-
-@app.route("/home", methods=['GET'])
-def home():
-   return render_template('home.html')
 
 @app.route("/sms", methods=['GET','POST'])
 
