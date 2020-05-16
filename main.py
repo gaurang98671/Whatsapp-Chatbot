@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route("/")
 
 def hello():
-    return render_template('ORDERv2.html')
+    return "Hello world"
 
 
 
@@ -29,3 +29,7 @@ def sms_reply():
 
     # Create reply
     return str(resp)
+
+
+if __name__ == '__main__':
+    app.run(debug=True)

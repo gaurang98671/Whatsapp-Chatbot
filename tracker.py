@@ -1,6 +1,6 @@
 import requests
 
-def get_corona_updates(country):
+def get_corona_updates(country_):
     url = "https://covid-193.p.rapidapi.com/statistics"
 
     headers = {
@@ -11,9 +11,15 @@ def get_corona_updates(country):
 
     response = requests.request("GET", url, headers=headers)
 
-    data=response.json()['response']['country' == country]
+    returned_data=response.json()['response']
+    data=''
 
-    parsed_data=''
+    for i in returned_data:
+
+        if(str(i['country']).lower()==country_.lower()):
+            data=i
+            break
+
 
     new_cases=data['cases']['new']
     active_cases = data['cases']['critical']
