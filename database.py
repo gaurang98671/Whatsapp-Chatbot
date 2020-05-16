@@ -32,4 +32,3 @@ def delete_orders(phone):
     mycol.delete_one({'phone': phone})
     print('Order deleted')
 
-
