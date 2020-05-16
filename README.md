@@ -16,5 +16,4 @@ __Command__: defination _{WORD}_
  
 ## Corona Virus Updates
 __Command__: covid update _{YOUR_COUNTRY_NAME}_
-
 ![](https://github.com/gaurang98671/Whatsapp-Chatbot/blob/master/screen_shots/covid_updates.jpeg)
