@@ -10,7 +10,7 @@ def reply_message(msg):
         return weather.get_weather(msg.split()[1])
 
     if(msg.split()[0]=='defination'):
-        return  dictionary.get_defination(msg.split()[1])
+        return  dictionary.get_definition(msg.split()[1])
 
     if(msg.split()[0:2] ==['covid', 'update']):
         return tracker.get_corona_updates(msg.split()[2])
