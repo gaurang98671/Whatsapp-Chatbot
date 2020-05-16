@@ -1,7 +1,7 @@
 import requests
 
-def get_defination(word):
-    defination= word+":"
+def get_definition(word):
+    definition= word+":"
     url = "https://mashape-community-urban-dictionary.p.rapidapi.com/define"
 
     querystring = {"term": word}
@@ -13,6 +13,6 @@ def get_defination(word):
 
     response = requests.request("GET", url, headers=headers, params=querystring)
     for i in response.json()['list'][:3]:
-        defination+="\nDefination:"+i['definition']+"\nExample:"+i['example']
+        definition+="\nDefinition:"+i['definition']+"\nExample:"+i['example']
 
-    return defination
+    return definition
