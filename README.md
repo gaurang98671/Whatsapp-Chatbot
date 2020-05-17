@@ -13,9 +13,8 @@ __Command__: news updates
 ![](https://github.com/gaurang98671/Whatsapp-Chatbot/blob/master/screen_shots/news_updates.jpeg)
 
 ## Urban dictionary
-__Command__: defination _{WORD}_
+__Command__: definition _{WORD}_
 
-![](https://github.com/gaurang98671/Whatsapp-Chatbot/blob/master/screen_shots/defination.jpeg)
  
 ## Corona Virus Updates
 __Command__: covid update _{YOUR_COUNTRY_NAME}_
