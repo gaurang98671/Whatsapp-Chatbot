@@ -1,6 +1,6 @@
 import requests
 
-def get_defination(word):
+def get_definition(word):
     definition= word+":"
     url = "https://mashape-community-urban-dictionary.p.rapidapi.com/define"
 
