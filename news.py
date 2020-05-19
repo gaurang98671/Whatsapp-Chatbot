@@ -14,5 +14,3 @@ def news():
         message+='\n'+i['url']
     return message
 
-if __name__ == '__main__':
-    print(news())
